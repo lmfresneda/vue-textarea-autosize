@@ -1,9 +1,11 @@
 /*!
  * vue-textarea-autosize v1.1.1 
- * (c) 2019 Saymon
+ * (c) 2020 Saymon
  * Released under the MIT License.
  */
 'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
 
 //
 //
@@ -38,6 +40,10 @@ var script = {
     important: {
       type: [Boolean, Array],
       default: false
+    },
+    subtractHeight: {
+      type: [Number],
+      'default': 0
     }
   },
   data: function data() {
@@ -111,7 +117,7 @@ var script = {
           }
         }
 
-        var heightVal = contentHeight + 'px';
+        var heightVal = contentHeight - _this.subtractHeight + 'px';
         _this.height = "".concat(heightVal).concat(important ? ' !important' : '');
       });
       return this;
@@ -231,7 +237,7 @@ var __vue_staticRenderFns__ = [];
   
 
   
-  var TextareaAutosize = normalizeComponent_1(
+  var _TextareaAutosize = normalizeComponent_1(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -245,16 +251,18 @@ var __vue_staticRenderFns__ = [];
 var version = '1.1.1';
 
 var install = function install(Vue) {
-  Vue.component('TextareaAutosize', TextareaAutosize);
+  Vue.component('TextareaAutosize', _TextareaAutosize);
 };
 
 var plugin = {
   install: install,
   version: version
 };
+var TextareaAutosize = _TextareaAutosize;
 
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(plugin);
 }
 
-module.exports = plugin;
+exports.TextareaAutosize = TextareaAutosize;
+exports.default = plugin;

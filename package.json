@@ -79,9 +79,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devstark-com/vue-textarea-autosize.git"
+    "url": "git+https://github.com/lmfresneda/vue-textarea-autosize.git"
   },
   "bugs": {
-    "url": "https://github.com/devstark-com/vue-textarea-autosize/issues"
+    "url": "https://github.com/lmfresneda/vue-textarea-autosize/issues"
   }
 }

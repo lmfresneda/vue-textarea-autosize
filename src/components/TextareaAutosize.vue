@@ -31,6 +31,10 @@ export default {
     important: {
       type: [Boolean, Array],
       default: false
+    },
+    subtractHeight: {
+      type: [Number],
+      'default': 0
     }
   },
   data () {
@@ -102,7 +106,7 @@ export default {
           }
         }
 
-        const heightVal = contentHeight + 'px'
+        const heightVal = (contentHeight - this.subtractHeight) + 'px'
         this.height = `${heightVal}${important ? ' !important' : ''}`
       })
 

@@ -1,8 +1,8 @@
-import TextareaAutosize from './components/TextareaAutosize.vue'
+import _TextareaAutosize from './components/TextareaAutosize.vue'
 const version = '__VERSION__'
 
 const install = Vue => {
-  Vue.component('TextareaAutosize', TextareaAutosize)
+  Vue.component('TextareaAutosize', _TextareaAutosize)
 }
 
 const plugin = {
@@ -10,6 +10,7 @@ const plugin = {
   version
 }
 
+export const TextareaAutosize = _TextareaAutosize
 export default plugin
 
 if (typeof window !== 'undefined' && window.Vue) {
